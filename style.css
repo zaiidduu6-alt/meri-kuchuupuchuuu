@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#app {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.asset {
+    display: none;
+}
+
+#mainImage,
+#menuCanvas {
+    position: absolute;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: contain;
+    background: #000;
+
+    pointer-events: none;
+}
+
+#menuCanvas {
+    display: none;
+}
+
+#touchLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+
+    touch-action: manipulation;
+    cursor: pointer;
+}
